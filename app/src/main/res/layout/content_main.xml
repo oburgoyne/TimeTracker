@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.orion.timetracker.MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text="Job Name"
+        android:ems="10"
+        android:id="@+id/jobName"
+        android:layout_marginTop="55dp"
+        android:layout_below="@+id/employIn"
+        android:layout_alignLeft="@+id/jobIn"
+        android:layout_alignStart="@+id/jobIn" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Job In"
+        android:id="@+id/jobIn"
+        android:layout_marginTop="51dp"
+        android:layout_marginLeft="37dp"
+        android:layout_marginStart="37dp"
+        android:layout_below="@+id/jobName"
+        android:layout_toRightOf="@+id/textView"
+        android:layout_toEndOf="@+id/textView" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Job Out"
+        android:id="@+id/jobOut"
+        android:layout_alignBottom="@+id/jobIn"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="63dp"
+        android:layout_marginEnd="63dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text="Employee Name"
+        android:ems="10"
+        android:id="@+id/employeeName"
+        android:layout_below="@+id/textView"
+        android:layout_alignLeft="@+id/jobName"
+        android:layout_alignStart="@+id/jobName" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Clock In"
+        android:id="@+id/employIn"
+        android:layout_marginTop="45dp"
+        android:layout_below="@+id/employeeName"
+        android:layout_alignLeft="@+id/employeeName"
+        android:layout_alignStart="@+id/employeeName" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Clock Out"
+        android:id="@+id/employOut"
+        android:layout_alignBottom="@+id/employIn"
+        android:layout_alignRight="@+id/jobOut"
+        android:layout_alignEnd="@+id/jobOut" /><![CDATA[
+
+    //android:text="Login:"
+        android:id="@+id/textView" />
+
+]]>
+</RelativeLayout>
