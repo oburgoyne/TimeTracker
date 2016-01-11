@@ -10,7 +10,8 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.example.orion.timetracker.MainActivity"
-    tools:showIn="@layout/activity_main">
+    tools:showIn="@layout/activity_main"
+    android:hapticFeedbackEnabled="true">
 
     <TextView
         android:layout_width="wrap_content"
@@ -20,12 +21,12 @@
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:text="Job Name"
+        android:inputType="textCapWords"
         android:ems="10"
         android:id="@+id/jobName"
-        android:layout_marginTop="55dp"
-        android:layout_below="@+id/employIn"
+        android:hint="Job Name"
+        android:editable="true"
+        android:layout_centerVertical="true"
         android:layout_alignLeft="@+id/jobIn"
         android:layout_alignStart="@+id/jobIn" />
 
@@ -34,9 +35,8 @@
         android:layout_height="wrap_content"
         android:text="Job In"
         android:id="@+id/jobIn"
-        android:layout_marginTop="51dp"
-        android:layout_marginLeft="37dp"
-        android:layout_marginStart="37dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginStart="25dp"
         android:layout_below="@+id/jobName"
         android:layout_toRightOf="@+id/textView"
         android:layout_toEndOf="@+id/textView" />
@@ -55,11 +55,13 @@
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:text="Employee Name"
+        android:inputType="textCapWords"
         android:ems="10"
         android:id="@+id/employeeName"
-        android:layout_below="@+id/textView"
+        android:hint="Employee Name"
+        android:editable="true"
+
+        android:layout_alignParentTop="true"
         android:layout_alignLeft="@+id/jobName"
         android:layout_alignStart="@+id/jobName" />
 
@@ -68,10 +70,10 @@
         android:layout_height="wrap_content"
         android:text="Clock In"
         android:id="@+id/employIn"
-        android:layout_marginTop="45dp"
         android:layout_below="@+id/employeeName"
         android:layout_alignLeft="@+id/employeeName"
-        android:layout_alignStart="@+id/employeeName" />
+        android:layout_alignStart="@+id/employeeName"
+        android:layout_marginTop="34dp" />
 
     <Button
         android:layout_width="wrap_content"
@@ -80,10 +82,43 @@
         android:id="@+id/employOut"
         android:layout_alignBottom="@+id/employIn"
         android:layout_alignRight="@+id/jobOut"
-        android:layout_alignEnd="@+id/jobOut" /><![CDATA[
+        android:layout_alignEnd="@+id/jobOut" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/timeConfirm"
+        android:text="          "
+        android:layout_below="@+id/employIn"
+        android:layout_alignLeft="@+id/employIn"
+        android:layout_alignStart="@+id/employIn" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="    "
+        android:id="@+id/jobConfirm"
+        android:layout_below="@+id/jobIn"
+        android:layout_alignLeft="@+id/jobIn"
+        android:layout_alignStart="@+id/jobIn" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Remember Me"
+        android:id="@+id/rememberMe"
+        android:layout_below="@+id/employeeName"
+        android:layout_alignLeft="@+id/employeeName"
+        android:layout_alignStart="@+id/employeeName"
+        android:checked="true" /><![CDATA[
+
+
 
     //android:text="Login:"
         android:id="@+id/textView" />
+
 
 ]]>
 </RelativeLayout>
